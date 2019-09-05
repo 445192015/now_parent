@@ -1,5 +1,8 @@
 package com.now.common.utils;
 
+import com.now.common.entity.Result;
+import com.now.common.enums.ResultEnums;
+
 /**
  * 返回工具类
  */

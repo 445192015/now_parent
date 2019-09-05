@@ -36,12 +36,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/oauth/check_token")
-                .antMatchers("/images/**");
+                .antMatchers("/oauth/check_token");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
+        http
+                .formLogin()
+                .and()
+                .authorizeRequests()
+                .anyRequest().authenticated();
     }
 }

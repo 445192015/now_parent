@@ -21,6 +21,9 @@
         <module>now_common</module>
         <module>now_oauth2_client1</module>
         <module>now_oauth2_client2</module>
+        <module>now_gateway</module>
+        <module>now_eureka</module>
+        <module>now_eureka_producer_1</module>
     </modules>
 
     <properties>
@@ -134,6 +137,16 @@
             <id>spring-snapshot</id>
             <name>Spring Snapshot</name>
             <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

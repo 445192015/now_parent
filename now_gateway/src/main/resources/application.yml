@@ -1,0 +1,25 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: now-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false # true可以直接根据注册中心服务名进行转发，false通过路由匹配进行转发
+          lowerCaseServiceId: true
+      routes:
+        - id: now-producer
+          uri: lb://now-producer
+          predicates:
+            - Path=/now-producer1/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

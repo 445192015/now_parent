@@ -1,9 +1,11 @@
-package com.now.common.utils;
+package com.now.common.entity;
 
+import com.now.common.enums.ResultEnums;
 import lombok.Data;
 
 /**
  * 返回结果
+ *
  * @param <T>
  */
 @Data
@@ -20,7 +22,7 @@ public class Result<T> {
     private Result() {
     }
 
-    public Result (ResultEnums enums, T data) {
+    public Result(ResultEnums enums, T data) {
         this.code = enums.getCode();
         this.msg = enums.getMsg();
         this.data = data;

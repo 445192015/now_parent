@@ -1,0 +1,12 @@
+server:
+  port: 9003
+  servlet:
+    context-path: /now-producer1
+spring:
+  application:
+    name: now-producer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

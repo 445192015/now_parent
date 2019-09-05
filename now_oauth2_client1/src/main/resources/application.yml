@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 9001
   servlet:
     context-path: /sso1
 security:
@@ -7,7 +7,7 @@ security:
     client:
       client-id: client1
       client-secret: secret
-      user-authorization-uri: http://127.0.0.1:8000/oauth/authorize
-      access-token-uri: http://127.0.0.1:8000/oauth/token
+      user-authorization-uri: http://127.0.0.1:8002/oauth/authorize
+      access-token-uri: http://127.0.0.1:8002/oauth/token
     resource:
-      token-info-uri: http://127.0.0.1:8000/oauth/check_token
+      token-info-uri: http://127.0.0.1:8002/oauth/check_token

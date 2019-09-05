@@ -1,4 +1,4 @@
-package com.now.common.utils;
+package com.now.common.enums;
 
 import lombok.Getter;
 
@@ -6,7 +6,7 @@ import lombok.Getter;
  * 返回状态码
  */
 @Getter
-public enum  ResultEnums {
+public enum ResultEnums {
     SUCCESS(0, "OK"),
     UNKNOWN_ERROR(-1, "系统异常，请联系管理员"),
     UNAUTHORIZED(401, "认证失败"),
